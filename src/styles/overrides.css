@@ -2,4 +2,10 @@
 .gallery-grid{height:auto;grid-template-rows:repeat(2,310px)}
 .gallery-grid .gallery-main{grid-column:span 2;grid-row:span 2}
 .contact{padding-top:145px;position:relative;z-index:1;isolation:isolate}
+.contact-channels{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:10px 0 14px;border-top:1px solid var(--line)}
+.contact-channels a{min-height:52px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);font-size:.75rem;letter-spacing:.04em;text-transform:uppercase}
+.contact-channels a:nth-child(odd){padding-right:18px;border-right:1px solid var(--line)}
+.contact-channels a:nth-child(even){padding-left:18px}
+.contact-channels a:hover{color:var(--accent)}
+.contact-channels b{font-size:1rem;font-weight:400}
 @media(max-width:700px){.gallery-grid{grid-template-rows:none}.gallery-grid .gallery-main{grid-column:1/-1;grid-row:auto}.contact{padding-top:90px}}

@@ -1,4 +1,4 @@
-import { services, site, works } from '../content/site'
+import { contactChannels, services, site, works } from '../content/site'
 
 export function HomePage() {
   return (
@@ -19,7 +19,7 @@ export function HomePage() {
       </section>
       <section className="section gallery" id="works"><div className="section-heading"><div><p className="eyebrow">Визуал салона</p><h2>Работы и пространство</h2></div><span className="section-index">02 — 06</span></div><div className="gallery-grid">{works.map((work, index) => <img className={index === 0 ? 'gallery-main' : undefined} src={work} alt={`Работа Volodya Salon ${index + 1}`} key={work} />)}</div>
       </section>
-      <section className="section contact" id="contact"><div><p className="eyebrow">Ждем вас</p><h2>До встречи<br />в Volodya</h2></div><div className="contact-details"><p>{site.contact.address}</p><p>{site.contact.hours}</p><a className="phone" href="tel:+79159304040">{site.contact.phone}</a><a className="button" href={site.bookingUrl} target="_blank" rel="noreferrer">Выбрать время <span>↗</span></a><a className="text-link" href={site.mapsUrl} target="_blank" rel="noreferrer">Построить маршрут</a></div>
+      <section className="section contact" id="contact"><div><p className="eyebrow">Ждем вас</p><h2>До встречи<br />в Volodya</h2></div><div className="contact-details"><p>{site.contact.address}</p><p>{site.contact.hours}</p><a className="phone" href="tel:+79159304040">{site.contact.phone}</a><div className="contact-channels" aria-label="Мессенджеры">{contactChannels.map((channel) => <a href={channel.href} target="_top" aria-label={channel.label} title={channel.label} key={channel.label}><span>{channel.label}</span><b>↗</b></a>)}</div><a className="button" href={site.bookingUrl} target="_blank" rel="noreferrer">Выбрать время <span>↗</span></a><a className="text-link" href={site.mapsUrl} target="_blank" rel="noreferrer">Построить маршрут</a></div>
       </section>
     </>
   )
