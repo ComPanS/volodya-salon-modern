@@ -7,7 +7,7 @@ export function SiteLayout() {
   return (
     <div className="site-shell">
       <header className="site-header">
-        <NavLink className="brand" to="/" end><img src="/images/logo.jpg" alt="" /> <span>{site.shortName}</span></NavLink>
+        <NavLink className="brand" to="/" end><img src={site.logoUrl} alt="" /> <span>{site.shortName}</span></NavLink>
         <nav aria-label="Main navigation">
           {navigation.map(({ to, label }) => (
             <a key={to} href={to}>

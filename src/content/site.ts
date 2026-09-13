@@ -1,3 +1,5 @@
+const assetUrl = (name: string) => `${import.meta.env.BASE_URL}images/${name}`
+
 export const site = {
   name: 'Volodya Salon',
   shortName: 'VOLODYA',
@@ -14,6 +16,7 @@ export const site = {
   bookingUrl: 'https://dikidi.net/562055',
   mapsUrl: 'https://yandex.ru/maps/org/volodya_salon/55531554642/',
   vkUrl: 'https://vk.ru/volodyasalon',
+  logoUrl: assetUrl('logo.jpg'),
 }
 
 export const services = [
@@ -24,10 +27,10 @@ export const services = [
 ]
 
 export const works = [
-  '/images/work-1.jpg',
-  '/images/work-2.jpg',
-  '/images/work-3.jpg',
-  '/images/work-4.jpg',
-  '/images/work-5.jpg',
-  '/images/work-6.jpg',
+  assetUrl('work-1.jpg'),
+  assetUrl('work-2.jpg'),
+  assetUrl('work-3.jpg'),
+  assetUrl('work-4.jpg'),
+  assetUrl('work-5.jpg'),
+  assetUrl('work-6.jpg'),
 ]

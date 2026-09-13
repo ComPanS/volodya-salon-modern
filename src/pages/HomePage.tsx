@@ -10,7 +10,7 @@ export function HomePage() {
           <p className="lede">{site.description}</p>
           <div className="hero-actions"><a className="button button-accent" href={site.bookingUrl} target="_blank" rel="noreferrer">Записаться онлайн <span>↗</span></a><a className="text-link" href={`tel:${site.contact.phone.replace(/[^\d+]/g, '')}`}>Позвонить</a></div>
         </div>
-        <div className="hero-visual"><img src="/images/logo.jpg" alt="Логотип Volodya Salon" /><div className="hero-photo"><img src={works[0]} alt="Работа стилистов Volodya Salon" /></div><span className="hero-note">Форма, цвет<br />и уход</span></div>
+        <div className="hero-visual"><img src={site.logoUrl} alt="Логотип Volodya Salon" /><div className="hero-photo"><img src={works[0]} alt="Работа стилистов Volodya Salon" /></div><span className="hero-note">Форма, цвет<br />и уход</span></div>
       </section>
       <section className="section intro" id="about">
         <p className="eyebrow">Почему к нам возвращаются</p><div className="intro-grid"><h2>Место, где образ собирается целиком.</h2><div><p>98% положительных отзывов отмечают персонал. 100% положительных отзывов говорят о компетентности и атмосфере.</p><a className="text-link" href={site.mapsUrl} target="_blank" rel="noreferrer">Смотреть отзывы на Яндекс Картах ↗</a></div></div>
