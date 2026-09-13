@@ -1,0 +1,5 @@
+/* Keep the visual archive contained so the following contact section never sits under it. */
+.gallery-grid{height:auto;grid-template-rows:repeat(2,310px)}
+.gallery-grid .gallery-main{grid-column:span 2;grid-row:span 2}
+.contact{padding-top:145px;position:relative;z-index:1;isolation:isolate}
+@media(max-width:700px){.gallery-grid{grid-template-rows:none}.gallery-grid .gallery-main{grid-column:1/-1;grid-row:auto}.contact{padding-top:90px}}
